@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -263,7 +263,7 @@ body {
 /* ===== SEÇÃO PROMOÇÕES ===== */
 .promo-section {
     padding: 60px 0;
-    background-color: var(--light-bg); /* Fundo bege para esta seção */
+    background-color: var(--light-bg); 
 }
 
 .promo-grid {
@@ -276,6 +276,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    width: 90%;
     height: 250px;
     cursor: pointer;
 }
@@ -541,8 +542,8 @@ body {
 .form-group input {
     width: 100%;
     padding: 12px;
-    border: 2px solid var(--border-color);
-    border-radius: 5px;
+    border: 2px solid var(--text-dark);
+    border-radius: 0 50px 50px 50px;
     font-size: 16px;
     transition: var(--transition);
 }
@@ -582,6 +583,9 @@ body {
 
 /* ===== FOOTER ===== */
 .footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
     background-color: var(--dark-bg);
     color: white;
     padding: 40px 0 10px; /* Rodapé mais compacto */
@@ -590,7 +594,7 @@ body {
 .footer-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 100px;
     margin-bottom: 40px;
 }
 .footer-section h3 {
@@ -605,7 +609,13 @@ body {
 .footer-section p {
     font-size: 14px;
     line-height: 1.8;
-    color: #ccc;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.footer-section p span {
+    color: var(--primary-color);
+    margin-right: 5px;
 }
 
 .footer-bottom {
