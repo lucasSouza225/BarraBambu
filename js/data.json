@@ -1,0 +1,723 @@
+{
+    "menu": {
+        "Bebidas alcoolicas": [
+            {
+                "id": 1,
+                "nome": "SMIRNOFF ICE",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 2,
+                "nome": "SKOL BEATS",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 3,
+                "nome": "SKOL BEATS GT",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Bebidas n/alcoolicas": [
+            {
+                "id": 4,
+                "nome": "ÁGUA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 5,
+                "nome": "ÁGUA COM GÁS",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 6,
+                "nome": "TÔNICA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 7,
+                "nome": "REFRIGERANTES",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 8,
+                "nome": "RED BULL",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 9,
+                "nome": "MONSTER",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 10,
+                "nome": "Soda Italiana",
+                "descricao": "• MAÇÃ VERDE • TANGERINA • • FRUTAS VERMELHAS • • MELANCIA • LIMÃO SICILIANO • OPÇÕES: LARANJA • LIMÃO • ABACAXI • ABACAXI COM HORTELÃ • CAJU • MORANGO • MARACUJÁ • caipirinhas",
+                "preco": 45
+            }
+        ],
+        "Caipirinhas": [
+            {
+                "id": 11,
+                "nome": "SMIRNOFF",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 12,
+                "nome": "ABSOLUT",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 13,
+                "nome": "SAQUÊ",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 14,
+                "nome": "CACHAÇA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 15,
+                "nome": "REFRESCANTE",
+                "descricao": "Limão, hortelã e boca do copo com crosta de sal.",
+                "preco": 45
+            },
+            {
+                "id": 16,
+                "nome": "CAIPICERVA",
+                "descricao": "Caipirosca com chopp e boca do copo com crosta de sal.",
+                "preco": 45
+            },
+            {
+                "id": 17,
+                "nome": "TRÊS LIMÕES",
+                "descricao": "T aiti, cravo e siciliano.",
+                "preco": 45
+            },
+            {
+                "id": 18,
+                "nome": "FRUTAS AMARELAS",
+                "descricao": "Caju, abacaxi, manga e maracujá.",
+                "preco": 45
+            },
+            {
+                "id": 19,
+                "nome": "MANJERICÃO",
+                "descricao": "Manjericão, uva ruby e kiwi.",
+                "preco": 45
+            },
+            {
+                "id": 20,
+                "nome": "BARRA BONITA",
+                "descricao": "Limão cravo, tangerina, manjericão, pimenta rosa e boca do copo com crosta de sal.",
+                "preco": 45
+            }
+        ],
+        "Carnes": [
+            {
+                "id": 21,
+                "nome": "À MODA DO CHEF",
+                "descricao": "Acompanhada tradicionl aligot, vinagrete, farofa e arroz biro biro.",
+                "preco": 45
+            },
+            {
+                "id": 22,
+                "nome": "À MINEIRA",
+                "descricao": "Acompanha queijo coalho, mandioca frita, feijão, vinagrete, farofa e arroz branco.",
+                "preco": 45
+            },
+            {
+                "id": 23,
+                "nome": "BARRA BONITA",
+                "descricao": "Bacon e calabresa salteados, fritas, Catupiry derretido e arroz branco.",
+                "preco": 45
+            },
+            {
+                "id": 24,
+                "nome": "À POIVRE",
+                "descricao": "Molho com deglacê, pimentas verdes fatiadas, fl ambado em conhaque, reduzido com creme de leite fresco. Acompanha batatas douradas e arroz branco.",
+                "preco": 45
+            },
+            {
+                "id": 25,
+                "nome": "MOLHO MADEIRA",
+                "descricao": "Molho à base de carnes, vinho madeira. Acompanha purê de batatas e arroz branco.",
+                "preco": 45
+            },
+            {
+                "id": 26,
+                "nome": "À FORESTIÈRE",
+                "descricao": "Batatas douradas, Catupiry derretido, bacon crocante. Acompanha arroz branco.",
+                "preco": 45
+            },
+            {
+                "id": 27,
+                "nome": "CABELO DE ANJO",
+                "descricao": "Grelhado e banhado em manteiga, com muita cebola crispy, purê de batatas trufado e arroz branco. Carnes Costelinha Barbecue especial R$ 98 Costelinha assada lentamente, com um toque defumado, fi nalizada com molho barbecue, Catupiry e muito bacon crocante. Acompanha batatas rústicas e arroz branco. peixes & Frutos do Mar",
+                "preco": 45
+            }
+        ],
+        "Cerveja n/acoolicas": [
+            {
+                "id": 28,
+                "nome": "HEINEKEIN ZERO",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Cervejas": [
+            {
+                "id": 29,
+                "nome": "MALZEBIER",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 30,
+                "nome": "HEINEKEIN",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 31,
+                "nome": "CORONA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 32,
+                "nome": "STELLA ARTOIS",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 33,
+                "nome": "BUDWEISER",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Cervejas n/alcoolicas": [
+            {
+                "id": 34,
+                "nome": "BUDWEISER ZERO",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Chopps Brahma": [
+            {
+                "id": 35,
+                "nome": "PILSEN TRADICIONAL",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 36,
+                "nome": "PILSEN SEM COLARINHO",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 37,
+                "nome": "Chopp COM VINHO",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 38,
+                "nome": "Chopp COM GROSELHA",
+                "descricao": "400ML CErVEJAS Long Necks Chopps Brahma",
+                "preco": 45
+            }
+        ],
+        "Doses": [
+            {
+                "id": 39,
+                "nome": "SMIRNOFF",
+                "descricao": "ABSOLUT R$ 23",
+                "preco": 45
+            },
+            {
+                "id": 40,
+                "nome": "CÎROC",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 41,
+                "nome": "CAMPARI",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 42,
+                "nome": "YPIÓCA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 43,
+                "nome": "STEINHAEGER",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 44,
+                "nome": "TEQUILA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 45,
+                "nome": "BACARDI ORO",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 46,
+                "nome": "BACARDI CARTA BLANCA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 47,
+                "nome": "DOMECQ",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Drinks Tradicionais": [
+            {
+                "id": 48,
+                "nome": "BARRA BAMBU",
+                "descricao": "Malibu, suco de abacaxi, licor de kiwi e soda.",
+                "preco": 45
+            },
+            {
+                "id": 49,
+                "nome": "MOSCOW MULE",
+                "descricao": "Vodka, suco de limão, xarope de gengibre e espuma de gengibre.",
+                "preco": 45
+            },
+            {
+                "id": 50,
+                "nome": "APEROL SPRITZ",
+                "descricao": "Aperol, suco de laranja, espumante, água com gaz e hortelã.",
+                "preco": 45
+            },
+            {
+                "id": 51,
+                "nome": "ALEXANDER",
+                "descricao": "Conhaque, licor de cacau, creme de leite, leite condensado e canela.",
+                "preco": 45
+            },
+            {
+                "id": 52,
+                "nome": "MOJITO",
+                "descricao": "Run, suco de limão, água com gaz e hortelã.",
+                "preco": 45
+            },
+            {
+                "id": 53,
+                "nome": "PIÑA COLADA",
+                "descricao": "Run, abacaxi, leite de coco e leite condensado.",
+                "preco": 45
+            },
+            {
+                "id": 54,
+                "nome": "MARGARITA",
+                "descricao": "Tequila, licor de laranja e suco de limão.",
+                "preco": 45
+            },
+            {
+                "id": 55,
+                "nome": "CORONITA",
+                "descricao": "Tequila, curaçau blue, suco de limão e Corona.",
+                "preco": 45
+            },
+            {
+                "id": 56,
+                "nome": "NEGRONI",
+                "descricao": "Campari, gin, vermut e laranja.",
+                "preco": 45
+            },
+            {
+                "id": 57,
+                "nome": "BOODY MARY",
+                "descricao": "Vodka, suco de tomate, suco de limão, molho inglês e tabasco.",
+                "preco": 45
+            },
+            {
+                "id": 58,
+                "nome": "COQUETEL DE FRUTAS",
+                "descricao": "Leite condensado, creme de leite, morango, abacaxi e pêssego.",
+                "preco": 45
+            }
+        ],
+        "Gin": [
+            {
+                "id": 59,
+                "nome": "TANQUERAY",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 60,
+                "nome": "BEEFEATER",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 61,
+                "nome": "BOMBAY",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 62,
+                "nome": "GORDONS",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 63,
+                "nome": "GIN TÔNICA",
+                "descricao": "Gin, água tônica e limão.",
+                "preco": 45
+            },
+            {
+                "id": 64,
+                "nome": "GIN TÔNICA ESPECIAL",
+                "descricao": "Gin, água tônica, limão, especiarias e frutas.",
+                "preco": 45
+            }
+        ],
+        "Long Necks": [
+            {
+                "id": 65,
+                "nome": "MALZEBIER",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 66,
+                "nome": "HEINEKEIN",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 67,
+                "nome": "CORONA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 68,
+                "nome": "STELLA ARTOIS",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 69,
+                "nome": "BUDWEISER",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Long Necks n/alcoolicas": [
+            {
+                "id": 70,
+                "nome": "HEINEKEIN ZERO",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 71,
+                "nome": "BUDWEISER ZERO",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Peixes & Frutos do Mar": [
+            {
+                "id": 72,
+                "nome": "CAMARÃO À BARRA BAMBU",
+                "descricao": "Camarões salteados em azeite, flambados em conhaque, molho de catupiry, arroz branco e batata palha.",
+                "preco": 45
+            },
+            {
+                "id": 73,
+                "nome": "CAMARÃO AO CATUPIRY",
+                "descricao": "Camarões salteados em azeite, flambados em conhaque, molho de catupiry, arroz branco e batata palha.",
+                "preco": 45
+            },
+            {
+                "id": 74,
+                "nome": "SALMÃO GRELHADO",
+                "descricao": "Salmão grelhado, arroz com brócolis e purê de batatas.",
+                "preco": 45
+            },
+            {
+                "id": 75,
+                "nome": "TILÁPIA GRELHADA",
+                "descricao": "Tilápia grelhada, arroz com brócolis e purê de batatas.",
+                "preco": 45
+            },
+            {
+                "id": 76,
+                "nome": "BACALHAU À BRÁS",
+                "descricao": "Bacalhau desfiado, batata palha, ovos, azeitonas pretas e salsa.",
+                "preco": 45
+            }
+        ],
+        "Petiscos": [
+            {
+                "id": 77,
+                "nome": "BATATA FRITA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 78,
+                "nome": "MANDIOCA FRITA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 79,
+                "nome": "POLENTA FRITA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 80,
+                "nome": "PASTEL DE QUEIJO",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 81,
+                "nome": "PASTEL DE CARNE",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 82,
+                "nome": "BOLINHO DE BACALHAU",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Pratos Executivos": [
+            {
+                "id": 83,
+                "nome": "EXECUTIVO DE CARNE",
+                "descricao": "Acompanha arroz, feijão, farofa e batata frita.",
+                "preco": 45
+            },
+            {
+                "id": 84,
+                "nome": "EXECUTIVO DE FRANGO",
+                "descricao": "Acompanha arroz, feijão, farofa e batata frita.",
+                "preco": 45
+            },
+            {
+                "id": 85,
+                "nome": "EXECUTIVO DE PEIXE",
+                "descricao": "Acompanha arroz, feijão, farofa e purê de batatas.",
+                "preco": 45
+            }
+        ],
+        "Pratos Kids": [
+            {
+                "id": 86,
+                "nome": "PRATO KIDS FRANGO",
+                "descricao": "Frango grelhado, arroz e batata frita.",
+                "preco": 45
+            },
+            {
+                "id": 87,
+                "nome": "PRATO KIDS CARNE",
+                "descricao": "Carne grelhada, arroz e batata frita.",
+                "preco": 45
+            }
+        ],
+        "Sobremesas": [
+            {
+                "id": 88,
+                "nome": "PETIT GATEAU",
+                "descricao": "Com sorvete de creme.",
+                "preco": 45
+            },
+            {
+                "id": 89,
+                "nome": "BROWNIE",
+                "descricao": "Com sorvete de creme.",
+                "preco": 45
+            },
+            {
+                "id": 90,
+                "nome": "PUDIM DE LEITE",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Soucos": [
+            {
+                "id": 91,
+                "nome": "SUCOS COM ÁGUA",
+                "descricao": ": LARANJA • LIMÃO • ABACAXI • ABACAXI COM HORTELÃ • CAJU • MORANGO • MARACUJÁ •",
+                "preco": 45
+            },
+            {
+                "id": 92,
+                "nome": "SUCOS COM LEITE",
+                "descricao": ": LARANJA • LIMÃO • ABACAXI • ABACAXI COM HORTELÃ • CAJU • MORANGO • MARACUJÁ •",
+                "preco": 45
+            },
+            {
+                "id": 93,
+                "nome": "JARRA COM ÁGUA",
+                "descricao": ": LARANJA • LIMÃO • ABACAXI • ABACAXI COM HORTELÃ • CAJU • MORANGO • MARACUJÁ •",
+                "preco": 45
+            },
+            {
+                "id": 94,
+                "nome": "JARRA COM LEITE",
+                "descricao": ": LARANJA • LIMÃO • ABACAXI • ABACAXI COM HORTELÃ • CAJU • MORANGO • MARACUJÁ •",
+                "preco": 45
+            }
+        ],
+        "Vegetariano": [
+            {
+                "id": 95,
+                "nome": "RISOTO DE PALMITO COM TOMATE CONFIT",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 96,
+                "nome": "RISOTO DE PERA COM GORGONZOLA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 97,
+                "nome": "SPAGHETTI ALFREDO",
+                "descricao": "individual",
+                "preco": 45
+            }
+        ],
+        "Vinhos": [
+            {
+                "id": 98,
+                "nome": "TAÇA VINHO DA CASA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 99,
+                "nome": "JARRA VINHO DA CASA",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 100,
+                "nome": "CONCHA Y TORO RESERVADO",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 101,
+                "nome": "CASILLERO DEL DIABLO",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 102,
+                "nome": "DV CATENA",
+                "descricao": "",
+                "preco": 45
+            }
+        ],
+        "Whisky Dose": [
+            {
+                "id": 103,
+                "nome": "RED LABEL",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 104,
+                "nome": "JACK DANIELS",
+                "descricao": "OPÇÕES: TRADICIONAL • MAÇÃ • CANELA E MEL •",
+                "preco": 45
+            },
+            {
+                "id": 105,
+                "nome": "BLACK LABEL",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 106,
+                "nome": "CHIVAS REGAL",
+                "descricao": "",
+                "preco": 45
+            },
+            {
+                "id": 107,
+                "nome": "ROYAL SALUTE",
+                "descricao": "0",
+                "preco": 45
+            },
+            {
+                "id": 108,
+                "nome": "BLUE LABEL",
+                "descricao": "0",
+                "preco": 45
+            },
+            {
+                "id": 109,
+                "nome": "BUCHANAN´S",
+                "descricao": "* ½ PORÇÃO SERÁ COBRADO 60% DO VALOR * COUVERT ARTÍSTICO POR PESSOA * TAXA DE SERVIÇO 10% *AVISO AOS ALÉRGICOS:",
+                "preco": 45
+            }
+        ]
+    },
+    "gallery": [
+        {"id": 1, "path": "img/gallery-1.jpg", "alt": "Galeria 1"},
+        {"id": 2, "path": "img/gallery-2.jpg", "alt": "Galeria 2"},
+        {"id": 3, "path": "img/gallery-3.jpg", "alt": "Galeria 3"},
+        {"id": 4, "path": "img/gallery-4.jpg", "alt": "Galeria 4"},
+        {"id": 5, "path": "img/gallery-5.jpg", "alt": "Galeria 5"},
+        {"id": 6, "path": "img/gallery-6.jpg", "alt": "Galeria 6"},
+        {"id": 7, "path": "img/gallery-7.jpg", "alt": "Galeria 7"},
+        {"id": 8, "path": "img/gallery-8.jpg", "alt": "Galeria 8"}
+    ],
+    "banners": [
+        {"id": 1, "path": "img/carousel-1.jpg", "alt": "Salmão Grelhado", "title": "Salmão Grelhado", "subtitle": "Delicioso e fresco"},
+        {"id": 2, "path": "img/carousel-2.jpg", "alt": "Prato Especial", "title": "Prato Especial", "subtitle": "Sabor incomparável"},
+        {"id": 3, "path": "img/carousel-3.jpg", "alt": "Bebida Refrescante", "title": "Bebida Refrescante", "subtitle": "Perfeita para acompanhar"}
+    ],
+    "promo": [
+        {"id": 1, "path": "img/promo-1.jpg", "alt": "Promoção 1", "text": "Promoção Especial"},
+        {"id": 2, "path": "img/promo-2.jpg", "alt": "Promoção 2", "text": "Cerveja Gelada"},
+        {"id": 3, "path": "img/promo-3.jpg", "alt": "Promoção 3", "text": "Happy Hour"},
+        {"id": 4, "path": "img/promo-4.jpg", "alt": "Promoção 4", "text": "Eventos"}
+    ]
+}

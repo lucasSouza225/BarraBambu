@@ -1,0 +1,763 @@
+/* ===== RESET E VARIÁVEIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #FFD301; /* Amarelo/Dourado mais claro */
+    --secondary-color: #719A0A; /* Dourado escuro para botões */
+    --dark-bg: #38241B; /* Marrom escuro do header/footer */
+    --light-bg: #f7f4e9; /* Fundo bege/creme */
+    --text-dark: #333;
+    --text-light: #969696;
+    --border-color: #ddd;
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Tentativa de imitar a serif do original */
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-bg); /* Aplicar a cor de fundo bege */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER/NAVEGAÇÃO ===== */
+.header {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 10px 0; /* Header mais fino */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+    padding: 8px 16px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===== CARROSSEL ===== */
+.carousel-section {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background-color: var(--dark-bg);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: white;
+    z-index: 10;
+    animation: slideInUp 0.8s ease-out;
+}
+
+.carousel-caption h2 {
+    font-family: 'Georgia', serif; /* Tentativa de fonte mais estilizada */
+    font-size: 60px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: white; /* O texto "Salmão Grelhado" é branco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    color: var(--primary-color); /* A linha de baixo é dourada */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo mais escuro */
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 20;
+    transition: var(--transition);
+    border-radius: 50%; /* Botões redondos */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-control.prev {
+    left: 20px;
+}
+
+.carousel-control.next {
+    right: 20px;
+}
+
+/* ===== SEÇÃO BEM-VINDO ===== */
+.welcome-section {
+    padding: 80px 0;
+    background-color: #fff; /* Fundo branco para esta seção */
+}
+
+.welcome-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.welcome-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.welcome-text h2 .highlight img{
+    width: 150px;
+}
+
+.welcome-text p {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    background-color: var(--dark-bg);
+}
+
+.welcome-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== SEÇÃO PROMOÇÕES ===== */
+.promo-section {
+    padding: 60px 0;
+    background-color: var(--light-bg); /* Fundo bege para esta seção */
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.promo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.promo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.promo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.promo-overlay p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.promo-card:hover img {
+    transform: scale(1.1);
+}
+
+.promo-card:hover .promo-overlay {
+    opacity: 1;
+}
+
+/* ===== SEÇÃO MENU ===== */
+.menu-section {
+    padding: 80px 0;
+    background-color: #fff; /* Fundo branco para esta seção */
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    color: var(--dark-bg); /* Títulos em marrom escuro */
+    padding: 10px 0;
+    border-bottom: 2px solid var(--primary-color); /* Linha de destaque */
+    display: inline-block;
+    margin: 0 auto 50px auto;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.menu-overlay p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-item:hover img {
+    transform: scale(1.15) rotate(2deg);
+}
+
+.menu-item:hover .menu-overlay {
+    opacity: 1;
+    background-color: rgba(75, 46, 32, 0.7); /* Overlay marrom escuro no hover */
+}
+
+.btn-primary {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    color: var(--dark-bg); /* Texto marrom escuro */
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color); /* Dourado mais escuro no hover */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== SEÇÃO FILOSOFIA ===== */
+.philosophy-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.philosophy-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.philosophy-text p {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.philosophy-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== SEÇÃO GALERIA ===== */
+.gallery-section {
+    padding: 80px 0;
+    background-color: var(--light-bg); /* Fundo bege */
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    color: var(--dark-bg); /* Títulos em marrom escuro */
+    padding: 10px 0;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    margin: 0 auto 50px auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1) rotate(1deg);
+}
+
+/* ===== SEÇÃO MEMÓRIAS ===== */
+.memories-section {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.memories-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.memories-section p {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ===== SEÇÃO RESERVA ===== */
+.reservation-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.reservation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.reservation-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: var(--dark-bg);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 40px 0 10px; /* Rodapé mais compacto */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    font-size: 14px;
+    color: #999;
+}
+
+/* ===== LIGHTBOX/MODAL ===== */
+.lightbox {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 200; /* Acima de tudo */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* Fundo preto semi-transparente */
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .nav-list {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .carousel-section {
+        height: 400px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 32px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+    }
+
+    .welcome-content,
+    .philosophy-content,
+    .reservation-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .promo-grid,
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .carousel-section {
+        height: 300px;
+    }
+
+    .carousel-caption {
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 24px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+
+    .welcome-section,
+    .philosophy-section,
+    .reservation-section,
+    .menu-section,
+    .gallery-section {
+        padding: 40px 0;
+    }
+
+    .welcome-text h2,
+    .philosophy-text h2,
+    .menu-section h2,
+    .gallery-section h2,
+    .memories-section h2 {
+        font-size: 24px;
+    }
+
+    .promo-grid,
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

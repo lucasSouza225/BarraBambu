@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Barra Bambu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cardapio.css">
+</head>
+<body>
+    <!-- HEADER/NAVEGAÇÃO (Copiado do index.html para manter a consistência) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="#reserva" class="nav-link">Reserva</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL DO CARDÁPIO -->
+    <main class="menu-page">
+        <div class="container">
+            <h2 class="menu-title">Cardápio Completo</h2>
+            
+            <div class="menu-layout">
+                <!-- Coluna do Cardápio -->
+                <div class="menu-items" id="menu-items-container">
+                    <!-- Itens do cardápio serão carregados aqui pelo JS -->
+                </div>
+
+                <!-- Coluna do Carrinho -->
+                <aside class="cart-sidebar">
+                    <div class="cart-header">
+                        <h3>Seu Pedido</h3>
+                        <span id="cart-total-items" class="total-items">0 itens</span>
+                    </div>
+                    
+                    <div class="cart-items" id="cart-items-list">
+                        <p class="empty-cart-message">Seu carrinho está vazio.</p>
+                        <!-- Itens do carrinho serão carregados aqui pelo JS -->
+                    </div>
+
+                    <div class="cart-summary">
+                        <p>Total: <span id="cart-total-price">R$ 0,00</span></p>
+                    </div>
+
+                    <button id="checkout-button" class="btn-submit" disabled>
+                        Finalizar Pedido (WhatsApp)
+                    </button>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (Copiado do index.html para manter a consistência) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HORÁRIO DE ATENDIMENTO:</h3>
+                    <p>Segunda a Quinta: 11:00 às 23:00</p>
+                    <p>Sexta e Sábado: 11:00 às 00:00</p>
+                    <p>Domingo: 11:00 às 22:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>CONTATO:</h3>
+                    <p>📞 (11) 3634-0295</p>
+                    <p>📍 Barra Bambu - SP</p>
+                </div>
+                <div class="footer-section">
+                    <h3>REDES SOCIAIS:</h3>
+                    <p>📱 @barrabambuoficial</p>
+                    <p>👍 facebook.com/barrabambu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Barra Bambu Restaurante. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE ENDEREÇO -->
+    <div id="address-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeAddressModal()">&times;</span>
+            <h3>Informações para Entrega</h3>
+            <form id="address-form">
+                <input type="text" id="address-rua" placeholder="Rua" required>
+                <input type="text" id="address-numero" placeholder="Número" required>
+                <input type="text" id="address-bairro" placeholder="Bairro" required>
+                <input type="text" id="address-complemento" placeholder="Complemento (Opcional)">
+                <input type="tel" id="address-telefone" placeholder="Telefone para Contato (Ex: 11987654321)" required>
+                <button type="submit" class="btn-submit" id="send-whatsapp-button">Enviar Pedido via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/cardapio.js"></script>
+</body>
+</html>

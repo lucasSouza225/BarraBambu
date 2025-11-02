@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Barra Bambu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cardapio.css"> <!-- Reutilizando estilos base -->
+    <style>
+        /* Estilos específicos do Admin */
+        .admin-page {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+            min-height: 100vh;
+        }
+
+        .admin-title {
+            text-align: center;
+            font-size: 36px;
+            color: var(--dark-bg);
+            margin-bottom: 40px;
+        }
+
+        .admin-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .admin-section h3 {
+            font-size: 28px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para a tabela do cardápio */
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .menu-table th, .menu-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .menu-table th {
+            background-color: var(--dark-bg);
+            color: white;
+            font-weight: bold;
+        }
+
+        .menu-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .menu-table button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .menu-table button:hover {
+            background-color: #c82333;
+        }
+
+        .category-header {
+            background-color: var(--primary-color) !important;
+            color: var(--dark-bg) !important;
+            font-size: 18px !important;
+            font-weight: bold;
+            text-align: center !important;
+        }
+
+        /* Estilos para a Galeria/Banners */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .image-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-card-footer {
+            padding: 10px;
+        }
+        
+        .image-card-footer button {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .upload-form {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+        }
+
+        .upload-form input[type="file"], .upload-form input[type="text"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .upload-form button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .upload-form button:hover {
+            background-color: var(--dark-bg);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER/NAVEGAÇÃO (Simples para o Admin) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Voltar para o Site</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL ADMIN -->
+    <main class="admin-page">
+        <div class="container">
+            <h1 class="admin-title">Painel de Administração</h1>
+
+            <!-- Gerenciamento do Cardápio -->
+            <section id="admin-menu" class="admin-section">
+                <h3>Gerenciar Cardápio</h3>
+                <div id="menu-list-container">
+                    <!-- Tabela do cardápio será carregada aqui -->
+                </div>
+            </section>
+
+            <!-- Gerenciamento de Banners -->
+            <section id="admin-banners" class="admin-section">
+                <h3>Gerenciar Banners (Carrossel)</h3>
+                <div class="image-grid" id="banners-grid">
+                    <!-- Banners serão carregados aqui -->
+                </div>
+                <!-- Formulário de Upload de Banner (Simulado) -->
+                <div class="upload-form">
+                    <h4>Adicionar Novo Banner (Simulado)</h4>
+                    <input type="file" id="banner-file" accept="image/*">
+                    <input type="text" id="banner-alt" placeholder="Descrição (Alt Text)">
+                    <input type="text" id="banner-title" placeholder="Título Principal">
+                    <input type="text" id="banner-subtitle" placeholder="Subtítulo">
+                    <button onclick="simulateUpload('banners')">Adicionar Banner</button>
+                </div>
+            </section>
+
+            <!-- Gerenciamento da Galeria -->
+            <section id="admin-gallery" class="admin-section">
+                <h3>Gerenciar Galeria</h3>
+                <div class="image-grid" id="gallery-grid">
+                    <!-- Imagens da galeria serão carregadas aqui -->
+                </div>
+                <!-- Formulário de Upload de Galeria (Simulado) -->
+                <div class="upload-form">
+                    <h4>Adicionar Nova Foto à Galeria (Simulado)</h4>
+                    <input type="file" id="gallery-file" accept="image/*">
+                    <input type="text" id="gallery-alt" placeholder="Descrição (Alt Text)">
+                    <button onclick="simulateUpload('gallery')">Adicionar Foto</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER (Copiado do index.html para manter a consistência) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HORÁRIO DE ATENDIMENTO:</h3>
+                    <p>Segunda a Quinta: 11:00 às 23:00</p>
+                    <p>Sexta e Sábado: 11:00 às 00:00</p>
+                    <p>Domingo: 11:00 às 22:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>CONTATO:</h3>
+                    <p>📞 (11) 3634-0295</p>
+                    <p>📍 Barra Bambu - SP</p>
+                </div>
+                <div class="footer-section">
+                    <h3>REDES SOCIAIS:</h3>
+                    <p>📱 @barrabambuoficial</p>
+                    <p>👍 facebook.com/barrabambu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Barra Bambu Restaurante. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
