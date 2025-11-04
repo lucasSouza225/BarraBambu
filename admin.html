@@ -168,11 +168,27 @@
 
             <!-- Gerenciamento do Cardápio -->
             <section id="admin-menu" class="admin-section">
-                <h3>Gerenciar Cardápio</h3>
-                <div id="menu-list-container">
-                    <!-- Tabela do cardápio será carregada aqui -->
-                </div>
-            </section>
+	                <h3>Gerenciar Cardápio</h3>
+	                
+	                <!-- Formulário de Adição de Item -->
+	                <div class="upload-form">
+	                    <h4>Adicionar Novo Item ao Cardápio</h4>
+	                    <form id="add-menu-item-form">
+	                        <input type="text" id="menu-item-nome" placeholder="Nome do Item" required>
+	                        <input type="text" id="menu-item-descricao" placeholder="Descrição (Opcional)">
+	                        <input type="number" id="menu-item-preco" placeholder="Preço (Ex: 45.00)" step="0.01" required>
+	                        <select id="menu-item-categoria" required>
+	                            <option value="" disabled selected>Selecione a Categoria</option>
+	                            <!-- Opções serão preenchidas pelo JS -->
+	                        </select>
+	                        <button type="submit">Adicionar Item</button>
+	                    </form>
+	                </div>
+
+	                <div id="menu-list-container">
+	                    <!-- Tabela do cardápio será carregada aqui -->
+	                </div>
+	            </section>
 
             <!-- Gerenciamento de Banners -->
             <section id="admin-banners" class="admin-section">

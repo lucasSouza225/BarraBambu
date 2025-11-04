@@ -5,6 +5,8 @@ let allData = {};
 const menuListContainer = document.getElementById('menu-list-container');
 const bannersGrid = document.getElementById('banners-grid');
 const galleryGrid = document.getElementById('gallery-grid');
+const addMenuItemForm = document.getElementById('add-menu-item-form');
+const menuItemCategorySelect = document.getElementById('menu-item-categoria');
 
 // --- Funções de Utilitário ---
 
@@ -29,6 +31,7 @@ async function loadAllData() {
         renderAdminMenu();
         renderAdminBanners();
         renderAdminGallery();
+        populateCategorySelect(); // Nova função
     } catch (error) {
         console.error('Erro ao carregar os dados:', error);
         menuListContainer.innerHTML = '<p>Não foi possível carregar os dados de administração.</p>';
@@ -78,6 +81,65 @@ function renderAdminMenu() {
     }
 
     menuListContainer.appendChild(table);
+}
+
+// Preenche o <select> de categorias no formulário de adição
+function populateCategorySelect() {
+    menuItemCategorySelect.innerHTML = '<option value="" disabled selected>Selecione a Categoria</option>';
+    const categories = Object.keys(allData.menu);
+    categories.forEach(category => {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        menuItemCategorySelect.appendChild(option);
+    });
+}
+
+// Lógica para adicionar novo item
+if (addMenuItemForm) {
+    addMenuItemForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const nome = document.getElementById('menu-item-nome').value;
+        const descricao = document.getElementById('menu-item-descricao').value;
+        const preco = parseFloat(document.getElementById('menu-item-preco').value);
+        const categoria = document.getElementById('menu-item-categoria').value;
+
+        if (!nome || !preco || !categoria) {
+            alert('Por favor, preencha o nome, preço e categoria.');
+            return;
+        }
+        
+        // Encontra o maior ID atual em todo o cardápio
+        let maxId = 0;
+        for (const cat in allData.menu) {
+            const currentMax = allData.menu[cat].reduce((max, item) => item.id > max ? item.id : max, 0);
+            if (currentMax > maxId) {
+                maxId = currentMax;
+            }
+        }
+        const newId = maxId + 1;
+
+        const newItem = {
+            "id": newId,
+            "nome": nome,
+            "descricao": descricao,
+            "preco": preco
+        };
+
+        // Adiciona o item à categoria
+        if (allData.menu[categoria]) {
+            allData.menu[categoria].push(newItem);
+        } else {
+            // Cria a categoria se não existir
+            allData.menu[categoria] = [newItem];
+        }
+
+        // Simula a persistência dos dados
+        saveAllData(allData);
+        alert(`Item "${nome}" adicionado com sucesso à categoria "${categoria}" (ID: ${newId}).`);
+        addMenuItemForm.reset();
+    });
 }
 
 window.deleteMenuItem = function(itemId, category) {
