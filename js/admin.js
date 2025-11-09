@@ -1,4 +1,12 @@
 // Variáveis globais para armazenar os dados
+const CORRECT_USERNAME = "bambuAdmin";
+const CORRECT_PASSWORD = "123456";
+
+// Elementos do DOM da tela de login
+const loginForm = document.getElementById('login-form');
+const loginScreen = document.getElementById('login-screen');
+const adminPage = document.querySelector('.admin-page');
+const loginMessage = document.getElementById('login-message');
 let allData = {};
 
 // Elementos do DOM
@@ -36,6 +44,37 @@ async function loadAllData() {
         console.error('Erro ao carregar os dados:', error);
         menuListContainer.innerHTML = '<p>Não foi possível carregar os dados de administração.</p>';
     }
+}
+
+// Inicializa o painel de administração após o login
+function initAdminPanel() {
+    // Remove o display: none que foi adicionado no HTML
+    adminPage.style.display = 'block';
+    // Carrega os dados e renderiza o painel
+    loadAllData();
+}
+
+// Lógica de Autenticação
+function handleLogin(e) {
+    e.preventDefault();
+
+    const usernameInput = document.getElementById('username').value;
+    const passwordInput = document.getElementById('password').value;
+
+    if (usernameInput === CORRECT_USERNAME && passwordInput === CORRECT_PASSWORD) {
+        // Login bem-sucedido
+        loginScreen.style.display = 'none';
+        initAdminPanel();
+    } else {
+        // Login falhou
+        loginMessage.textContent = 'Usuário ou senha incorretos.';
+        loginMessage.style.display = 'block';
+    }
+}
+
+// Verifica se o formulário de login existe e adiciona o listener
+if (loginForm) {
+    loginForm.addEventListener('submit', handleLogin);
 }
 
 // --- Gerenciamento do Cardápio ---
@@ -256,4 +295,5 @@ window.simulateUpload = function(type) {
 }
 
 // Inicialização
-document.addEventListener('DOMContentLoaded', loadAllData);
+// A inicialização do painel agora é feita após o login bem-sucedido.
+// document.addEventListener('DOMContentLoaded', loadAllData); // Removido para ser chamado após o login
