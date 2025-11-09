@@ -707,12 +707,13 @@
         {"id": 5, "path": "img/gallery-5.jpg", "alt": "Galeria 5"},
         {"id": 6, "path": "img/gallery-6.jpg", "alt": "Galeria 6"},
         {"id": 7, "path": "img/gallery-7.jpg", "alt": "Galeria 7"},
-        {"id": 8, "path": "img/gallery-8.jpg", "alt": "Galeria 8"}
+        {"id": 8, "path": "img/gallery-8.jpg", "alt": "Galeria 8"},
+        {"id": 8, "path": "img/gallery-9.jpg", "alt": "Galeria 9"}
     ],
     "banners": [
         {"id": 1, "path": "img/carousel-1.jpg", "alt": "Salmão Grelhado", "title": "Salmão Grelhado", "subtitle": "Delicioso e fresco"},
-        {"id": 2, "path": "img/carousel-2.jpg", "alt": "Prato Especial", "title": "Prato Especial", "subtitle": "Sabor incomparável"},
-        {"id": 3, "path": "img/carousel-3.jpg", "alt": "Bebida Refrescante", "title": "Bebida Refrescante", "subtitle": "Perfeita para acompanhar"}
+        {"id": 2, "path": "img/carousel-2.jpg", "alt": "Bebida Refrescante ", "title": " Bebida Refrescante", "subtitle": " Perfeita para acompanhar"},
+        {"id": 3, "path": "img/carousel-3.jpg", "alt": "Prato Especial", "title": "Prato Especial", "subtitle": "Sabor incomparável"}
     ],
     "promo": [
         {"id": 1, "path": "img/promo-1.jpg", "alt": "Promoção 1", "text": "Promoção Especial"},

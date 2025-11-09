@@ -84,7 +84,7 @@ function renderGallery() {
     if (!galleryGrid) return;
     galleryGrid.innerHTML = '';
     // Combina galeria e promoções para a seção de galeria do index.html
-    const images = [...allData.gallery, ...allData.promo];
+    const images = [...allData.gallery];
     
     images.forEach(image => {
         const item = document.createElement('div');
@@ -184,7 +184,7 @@ function initializeScrollAnimations() {
     }, observerOptions);
 
     // Observa elementos com animação
-    const animatedElements = document.querySelectorAll('.menu-item, .promo-card, .gallery-item');
+    const animatedElements = document.querySelectorAll('.menu-item,.gallery-item');
     animatedElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
