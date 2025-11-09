@@ -90,6 +90,38 @@ body {
     width: 100%;
 }
 
+/* ===== ESTILOS DO HAMBURGUER (MOBILE) ===== */
+.hamburger {
+    display: none; /* Esconder por padrão em desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 110; /* Acima do nav-list */
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animação do X */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 /* ===== CARROSSEL ===== */
 .carousel-section {
     width: 100%;
@@ -674,6 +706,68 @@ body {
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
+    /* Mostrar o botão hambúrguer */
+    .hamburger {
+        display: block;
+    }
+
+    /* Esconder a navegação por padrão */
+    .nav-list {
+        position: fixed;
+        top: 0; /* Ajustar para a altura do header se necessário */
+        right: -100%; /* Esconder fora da tela */
+        width: 70%;
+        height: 100vh;
+        background-color: var(--dark-bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Mostrar a navegação quando ativo */
+    .nav-list.active {
+        right: 0;
+    }
+
+    .nav-list li {
+        margin: 20px 0;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        color: white;
+    }
+
+    /* Ajustes no layout */
+    .header .container {
+        padding: 10px 20px;
+    }
+
+    .welcome-content, .philosophy-content {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-image, .philosophy-image {
+        order: -1; /* Coloca a imagem acima do texto no mobile */
+    }
+
+    .promo-grid, .menu-grid, .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carousel-section {
+        height: 400px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 40px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+    }
     .nav-list {
         gap: 15px;
         font-size: 14px;
@@ -719,15 +813,17 @@ body {
 
 @media (max-width: 480px) {
     .header .container {
-        flex-direction: column;
+        /* A navegação agora é controlada pelo menu hambúrguer, então não precisamos mais de flex-direction: column aqui */
+        /* flex-direction: column; */
         gap: 15px;
     }
 
-    .nav-list {
+    /* .nav-list não precisa ser alterado aqui, pois já é tratado no 768px */
+    /* .nav-list {
         flex-direction: column;
         gap: 10px;
         text-align: center;
-    }
+    } */
 
     .carousel-section {
         height: 300px;

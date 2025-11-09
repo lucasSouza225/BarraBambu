@@ -16,6 +16,11 @@
                 <img src="img/logo.png" alt="Logo">
             </div>
             <nav class="nav">
+                <button class="hamburger" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
                 <ul class="nav-list">
                     <li><a href="#sobre" class="nav-link">Sobre</a></li>
                     <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
@@ -23,6 +28,7 @@
                     <li><a href="#reserva" class="nav-link">Reserva</a></li>
                     <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
+            </nav>
             </nav>
         </div>
     </header>
@@ -321,6 +327,27 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navList = document.querySelector('.nav-list');
+
+            hamburger.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            // Fechar o menu ao clicar em um link (para mobile)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navList.classList.contains('active')) {
+                        navList.classList.remove('active');
+                        hamburger.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
