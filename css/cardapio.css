@@ -88,6 +88,7 @@
     flex: 3; /* Ocupa mais espaço */
 }
 
+
 .category-section {
     margin-bottom: 40px;
     padding: 20px;
@@ -253,7 +254,7 @@
 }
 
 /* Responsividade */
-@media (max-width: 992px) {
+@media (max-width: 992px) {  
     .menu-layout {
         flex-direction: column;
     }
@@ -261,5 +262,17 @@
     .cart-sidebar {
         position: static;
         height: auto;
+    }
+
+    .item-details h4 {
+        font-size: 10px;
+    }
+
+    .item-details .item-price {
+        font-size: 5px;
+    }
+
+    .item-details p {
+        font-size: 10px;
     }
 }

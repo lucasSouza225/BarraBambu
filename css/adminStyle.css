@@ -1,4 +1,8 @@
  /* Estilos da Tela de Login */
+        .nav-list {
+            display: flex;
+        }
+
         .login-screen {
             position: fixed;
             top: 0;

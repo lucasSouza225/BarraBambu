@@ -818,13 +818,6 @@ body {
         gap: 15px;
     }
 
-    /* .nav-list não precisa ser alterado aqui, pois já é tratado no 768px */
-    /* .nav-list {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    } */
-
     .carousel-section {
         height: 300px;
     }
@@ -855,7 +848,7 @@ body {
     .menu-section h2,
     .gallery-section h2,
     .memories-section h2 {
-        font-size: 24px;
+        font-size: 12px;
     }
 
     .promo-grid,
